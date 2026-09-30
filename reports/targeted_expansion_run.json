@@ -1,0 +1,126 @@
+{
+  "policy": "legacy_generated_is_concept_reference_only_candidates_must_come_from_tencent_vocabulary",
+  "source_vocab_size": 143613,
+  "excluded_existing_top5000": 5000,
+  "seed_status": {
+    "校园外貌与信物": {
+      "in_vocab": [
+        "刘海",
+        "马尾",
+        "发卡",
+        "发梢",
+        "酒窝",
+        "红脸",
+        "校服",
+        "纽扣"
+      ],
+      "oov": [
+        "小皮筋"
+      ]
+    },
+    "纸面心意与暗号": {
+      "in_vocab": [
+        "情书",
+        "纸条",
+        "书签",
+        "信封",
+        "书信",
+        "明信片",
+        "日记本",
+        "暗号"
+      ],
+      "oov": [
+        "小纸条"
+      ]
+    },
+    "校园空间与路线": {
+      "in_vocab": [
+        "教室",
+        "走廊",
+        "操场",
+        "看台",
+        "图书馆",
+        "小卖部",
+        "广播站",
+        "篮球场",
+        "体育馆",
+        "林荫道",
+        "公交站",
+        "放学"
+      ],
+      "oov": []
+    },
+    "校园日常互动": {
+      "in_vocab": [
+        "同桌",
+        "值日",
+        "合照",
+        "等车"
+      ],
+      "oov": [
+        "留座",
+        "讲题",
+        "借笔记",
+        "递纸条",
+        "送伞"
+      ]
+    },
+    "青春感官与毕业": {
+      "in_vocab": [
+        "晚霞",
+        "晨光",
+        "铃声",
+        "雨伞",
+        "毕业",
+        "离别"
+      ],
+      "oov": [
+        "蝉鸣",
+        "毕业季",
+        "校园广播"
+      ]
+    },
+    "约会物件与仪式": {
+      "in_vocab": [
+        "奶茶",
+        "玫瑰",
+        "电影院",
+        "纪念日",
+        "游乐园",
+        "礼物",
+        "情人节",
+        "七夕"
+      ],
+      "oov": [
+        "花束",
+        "情侣座"
+      ]
+    }
+  },
+  "per_category_requested": 250,
+  "per_category_retrieved_before_cross_category_dedup": {
+    "校园外貌与信物": 250,
+    "纸面心意与暗号": 250,
+    "校园空间与路线": 250,
+    "校园日常互动": 250,
+    "青春感官与毕业": 250,
+    "约会物件与仪式": 250
+  },
+  "unique_incremental_candidates": 1445,
+  "legacy_exact_reference_count": 17,
+  "filter_counts": {
+    "too_short": 14285,
+    "accepted": 96647,
+    "sentence_punctuation": 3,
+    "sentence_fragment": 27,
+    "numeric_noise": 2085,
+    "repeated_character_noise": 712,
+    "low_cjk_ratio": 20130,
+    "person_name": 9709,
+    "allowlist": 1,
+    "url_html_control": 6,
+    "over_16_default_limit": 6,
+    "sentence_like_context": 1,
+    "over_30_hard_limit": 1
+  }
+}

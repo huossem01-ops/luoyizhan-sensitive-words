@@ -1,0 +1,41 @@
+{
+  "total_reviewed": 240,
+  "decision_distribution": {
+    "keep": 150,
+    "reject": 46,
+    "borderline": 44
+  },
+  "by_category": {
+    "校园外貌与信物": {
+      "keep": 29,
+      "reject": 8,
+      "borderline": 3
+    },
+    "纸面心意与暗号": {
+      "keep": 26,
+      "reject": 9,
+      "borderline": 5
+    },
+    "校园空间与路线": {
+      "keep": 25,
+      "borderline": 13,
+      "reject": 2
+    },
+    "校园日常互动": {
+      "keep": 12,
+      "borderline": 9,
+      "reject": 19
+    },
+    "青春感官与毕业": {
+      "keep": 31,
+      "borderline": 7,
+      "reject": 2
+    },
+    "约会物件与仪式": {
+      "keep": 27,
+      "borderline": 7,
+      "reject": 6
+    }
+  },
+  "policy": "Legacy generated data supplied concept gaps only; every reviewed candidate is present in Tencent vocabulary and absent from the original Top-5000 pool."
+}

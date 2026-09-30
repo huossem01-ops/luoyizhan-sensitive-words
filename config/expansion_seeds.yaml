@@ -1,0 +1,74 @@
+version: 1
+policy: legacy_generated_is_concept_reference_only_candidates_must_come_from_tencent_vocabulary
+categories:
+  校园外貌与信物:
+    - 刘海
+    - 马尾
+    - 发卡
+    - 发梢
+    - 酒窝
+    - 红脸
+    - 小皮筋
+    - 校服
+    - 纽扣
+  纸面心意与暗号:
+    - 情书
+    - 纸条
+    - 小纸条
+    - 书签
+    - 信封
+    - 书信
+    - 明信片
+    - 日记本
+    - 暗号
+  校园空间与路线:
+    - 教室
+    - 走廊
+    - 操场
+    - 看台
+    - 图书馆
+    - 小卖部
+    - 广播站
+    - 篮球场
+    - 体育馆
+    - 林荫道
+    - 公交站
+    - 放学
+  校园日常互动:
+    - 同桌
+    - 值日
+    - 合照
+    - 留座
+    - 讲题
+    - 借笔记
+    - 递纸条
+    - 送伞
+    - 等车
+  青春感官与毕业:
+    - 晚霞
+    - 晨光
+    - 铃声
+    - 雨伞
+    - 蝉鸣
+    - 毕业
+    - 毕业季
+    - 离别
+    - 校园广播
+  约会物件与仪式:
+    - 奶茶
+    - 玫瑰
+    - 电影院
+    - 纪念日
+    - 游乐园
+    - 礼物
+    - 花束
+    - 情人节
+    - 七夕
+    - 情侣座
+retrieval:
+  per_category_k: 250
+  pool_multiplier: 2
+  min_score: 0.45
+  score_weights:
+    max_seed_similarity: 0.6
+    top3_seed_similarity: 0.4

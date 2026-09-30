@@ -1,0 +1,8 @@
+{
+  "candidate_count": 1445,
+  "review_sample_count": 240,
+  "review_per_category": "top40_plus_novel_in_vocab_seed_terms",
+  "embedding_cache_hit": true,
+  "model": "BAAI/bge-small-zh-v1.5",
+  "revision": "7999e1d3359715c523056ef9478215996d62a620"
+}

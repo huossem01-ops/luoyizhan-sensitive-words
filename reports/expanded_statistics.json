@@ -1,0 +1,36 @@
+{
+  "total_records": 310,
+  "core_reviewed_records": 160,
+  "targeted_expansion_records": 150,
+  "unique_terms": 310,
+  "unique_normalized_terms": 310,
+  "average_length": 2.46129,
+  "median_length": 2.0,
+  "p90_length": 4.0,
+  "max_length": 5,
+  "over_12": 0,
+  "over_16": 0,
+  "over_30": 0,
+  "category_distribution": {
+    "恋爱历史": 12,
+    "婚恋": 41,
+    "恋爱核心": 26,
+    "约会": 3,
+    "对象关系": 21,
+    "单身与脱单": 7,
+    "表白与追求": 13,
+    "亲密行为": 21,
+    "校园恋爱": 4,
+    "社会比较与人生进度": 12,
+    "约会物件与仪式": 27,
+    "校园日常互动": 12,
+    "青春感官与毕业": 31,
+    "校园空间与路线": 25,
+    "纸面心意与暗号": 26,
+    "校园外貌与信物": 29
+  },
+  "route_distribution": {
+    "tencent_top5000_bge_fusion_reviewed": 160,
+    "tencent_targeted_expansion_legacy_concept_audit": 150
+  }
+}

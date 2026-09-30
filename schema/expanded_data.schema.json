@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/luoyizhan-expanded-reviewed.schema.json",
+  "title": "罗翼展扩展审核词库记录",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "term", "normalized_term", "length", "source", "inclusion_route",
+    "category", "best_seed", "tencent_similarity", "bge_similarity",
+    "source_rank", "review_status"
+  ],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1},
+    "term": {"type": "string", "minLength": 2, "maxLength": 30},
+    "normalized_term": {"type": "string", "minLength": 1},
+    "length": {"type": "integer", "minimum": 2, "maximum": 30},
+    "source": {"type": "string", "minLength": 1},
+    "inclusion_route": {"type": "string", "enum": ["tencent_top5000_bge_fusion_reviewed", "tencent_targeted_expansion_legacy_concept_audit"]},
+    "category": {"type": "string", "minLength": 1},
+    "best_seed": {"type": "string", "minLength": 1},
+    "tencent_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+    "bge_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+    "source_rank": {"type": "integer", "minimum": 1},
+    "review_status": {"type": "string", "const": "reviewed_keep"}
+  }
+}
