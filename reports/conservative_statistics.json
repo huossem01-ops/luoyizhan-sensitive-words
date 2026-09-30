@@ -1,0 +1,17 @@
+{
+  "reviewed_keep_count": 160,
+  "review_decision_distribution": {
+    "keep": 160,
+    "reject": 272,
+    "borderline": 109
+  },
+  "unique_terms": 160,
+  "average_length": 2.59375,
+  "median_length": 2.0,
+  "p90_length": 4.0,
+  "max_length": 5,
+  "over_12": 0,
+  "over_16": 0,
+  "over_30": 0,
+  "note": "Only first-pass reviewed keep labels are included; borderline and unreviewed candidates are excluded."
+}

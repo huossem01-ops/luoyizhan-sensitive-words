@@ -71,8 +71,14 @@ def main() -> None:
         if center > total:
             unavailable_centers.append(center)
             continue
-        start = 1 if center == 1 else max(1, center - window_size // 2)
-        end = min(total, start + window_size - 1)
+        if center == 1:
+            start, end = 1, min(total, window_size)
+        elif center == total:
+            start, end = max(1, total - window_size + 1), total
+        else:
+            start = max(1, center - window_size // 2 + 1)
+            end = min(total, start + window_size - 1)
+            start = max(1, end - window_size + 1)
         for record in records[start - 1:end]:
             manual_rows.append({
                 "sample_center": center,

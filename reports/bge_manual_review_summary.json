@@ -1,0 +1,36 @@
+{
+  "total_labeled": 300,
+  "bands": {
+    "1": {
+      "count": 100,
+      "keep": 84,
+      "borderline": 9,
+      "reject": 7,
+      "strict_keep_rate": 0.84,
+      "keep_or_borderline_rate": 0.93,
+      "score_min": 0.77513617,
+      "score_max": 0.96379173
+    },
+    "1000": {
+      "count": 100,
+      "keep": 13,
+      "borderline": 30,
+      "reject": 57,
+      "strict_keep_rate": 0.13,
+      "keep_or_borderline_rate": 0.43,
+      "score_min": 0.59291857,
+      "score_max": 0.60128593
+    },
+    "5000": {
+      "count": 100,
+      "keep": 8,
+      "borderline": 16,
+      "reject": 76,
+      "strict_keep_rate": 0.08,
+      "keep_or_borderline_rate": 0.24,
+      "score_min": 0.33100373,
+      "score_max": 0.40010613
+    }
+  },
+  "finding": "BGE improves Top-100 precision but demotes some stable idioms; use score/rank fusion instead of replacing Tencent order."
+}

@@ -1,0 +1,12 @@
+{
+  "model": "BAAI/bge-small-zh-v1.5",
+  "revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "device": "cpu",
+  "use_query_instruction": false,
+  "candidate_count": 5000,
+  "seed_count": 62,
+  "embedding_dimension": 512,
+  "embedding_cache_hit": true,
+  "bge_score_min": 0.33100373,
+  "bge_score_max": 0.96379173
+}

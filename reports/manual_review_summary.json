@@ -1,0 +1,42 @@
+{
+  "annotation_policy": "strict semantic relevance; borderline is excluded from conservative auto-accept precision",
+  "total_labeled": 300,
+  "bands": {
+    "1": {
+      "count": 100,
+      "keep": 83,
+      "borderline": 4,
+      "reject": 13,
+      "strict_keep_rate": 0.83,
+      "keep_or_borderline_rate": 0.87,
+      "score_min": 0.74382007,
+      "score_max": 0.96703861
+    },
+    "1000": {
+      "count": 100,
+      "keep": 23,
+      "borderline": 26,
+      "reject": 51,
+      "strict_keep_rate": 0.23,
+      "keep_or_borderline_rate": 0.49,
+      "score_min": 0.57510009,
+      "score_max": 0.58153181
+    },
+    "5000": {
+      "count": 100,
+      "keep": 3,
+      "borderline": 25,
+      "reject": 72,
+      "strict_keep_rate": 0.03,
+      "keep_or_borderline_rate": 0.28,
+      "score_min": 0.48155047,
+      "score_max": 0.482754
+    }
+  },
+  "recommended_thresholds": {
+    "auto_accept_min_score": 0.74,
+    "manual_review_min_score": 0.58,
+    "below_review_threshold": "reject_by_default",
+    "rationale": "Top-100 remains high precision while the rank-1000 band already has low strict precision; thresholds are provisional until denser samples are labeled."
+  }
+}

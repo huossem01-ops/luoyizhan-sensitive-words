@@ -1,0 +1,24 @@
+{
+  "method": "standardized logistic fusion; borderline labels excluded",
+  "features": [
+    "tencent_score",
+    "bge_score",
+    "tencent_rank_percentile",
+    "bge_rank_percentile",
+    "best_rank_percentile",
+    "worst_rank_percentile"
+  ],
+  "unique_reviewed_terms": 531,
+  "training_terms": 423,
+  "training_keep": 151,
+  "training_reject": 272,
+  "cv_roc_auc": 0.916099,
+  "cv_average_precision": 0.889068,
+  "selected_probability_threshold": 0.85249949,
+  "cv_precision_at_threshold": 0.907407,
+  "cv_recall_at_threshold": 0.649007,
+  "high_score_candidate_count": 117,
+  "auto_accept_unreviewed_count": 10,
+  "manual_keep_count": 151,
+  "caution": "Cross-validation is on deliberately rank-stratified audit samples, not an iid gold test set; fusion_score is provisional and requires fresh holdout review."
+}

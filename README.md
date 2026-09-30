@@ -8,8 +8,9 @@
 
 - 已暂停并隔离旧的 48,000 条生成方案；旧数据仅保留在 `data/legacy_generated/` 供审计。
 - MVP 使用腾讯 AI Lab 中文词向量的轻量镜像（143,613 个词/短语、200 维）进行召回。
-- 当前目标是验证 Top 5,000 的召回质量，不补齐 48,000 条。
+- 已完成 Top 5,000 召回、三层抽样标注和 BGE 重排实验；仍不补齐 48,000 条。
 - `term` 只允许词和固定/常用短语；当前自动过滤上限为 16 字，30 字以上绝不进入正式候选。
+- 当前保守发布子集为 160 条，全部来自第一轮明确标为 `keep` 的审核样本；边界词和未审核词不进入该子集。
 
 ## 数据流
 
@@ -27,6 +28,13 @@
 - `data/final/sensitive_words.csv`
 - `data/final/sensitive_words.jsonl`
 
+经过明确审核的保守子集输出到：
+
+- `data/final/conservative_sensitive_words.csv`
+- `data/final/conservative_sensitive_words.jsonl`
+
+BGE 与融合排序实验保存在 `data/reranked/`，不会覆盖原始腾讯召回顺序。
+
 每条记录包括词条、规范化形式、长度、综合相似度、排名、最相近种子、最佳类别、类别相似度、暂定语义等级和数据源。字段约束见 `schema/data.schema.json`。
 
 ## 运行
@@ -41,6 +49,11 @@ python -m venv .venv
 .venv\Scripts\python src\deduplicate.py
 .venv\Scripts\python src\validate.py
 .venv\Scripts\python src\qa.py
+.venv\Scripts\python src\label_manual_samples.py
+.venv\Scripts\python src\bge_rerank.py
+.venv\Scripts\python src\label_bge_samples.py
+.venv\Scripts\python src\calibrate_fusion.py
+.venv\Scripts\python src\build_conservative.py
 ```
 
 腾讯官方完整词向量及轻量镜像的来源、许可和限制见 `docs/data_sources.md`。轻量镜像只用于跑通 MVP；后续若替换为官方完整词表，必须重新运行召回、去重和抽检。
@@ -57,6 +70,7 @@ python -m venv .venv
 
 - 轻量镜像只含官方大词表的一个子集，召回覆盖和排名不能代表完整腾讯词向量。
 - 分布式词向量会召回人名、作品名、机构名和只有特定语境才相关的词，必须人工审核。
+- BGE 可以提高头部集中度，但会把部分成语和固定恋爱表达错误降权，因此只作为第二路信号，与腾讯排名融合使用。
 - 种子词覆盖会直接影响类别分布；类别和暂定等级不是客观心理测量。
 - 互联网语言持续变化，中英文混用词需定期复核。
 

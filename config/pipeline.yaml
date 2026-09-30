@@ -40,3 +40,11 @@ qa:
     - 10000
     - 30000
     - 48000
+reranking:
+  model_name: BAAI/bge-small-zh-v1.5
+  revision: 7999e1d3359715c523056ef9478215996d62a620
+  batch_size: 256
+  device: cpu
+  use_query_instruction: false
+  cache_path: cache/bge/bge-small-zh-v1.5_top5000.npz
+  output_top_k: 5000
