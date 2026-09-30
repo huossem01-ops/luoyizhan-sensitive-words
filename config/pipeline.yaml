@@ -1,0 +1,42 @@
+version: 1
+source:
+  format: word2vec_binary
+  path: cache/tencent_vectors/light_Tencent_AILab_ChineseEmbedding.bin
+  name: tencent_ai_lab_chinese_embedding_light_mirror_mvp
+  upstream: Tencent AI Lab Embedding Corpus for Chinese Words and Phrases
+retrieval:
+  top_k: 5000
+  pool_multiplier: 4
+  score_weights:
+    max_seed_similarity: 0.6
+    top3_seed_similarity: 0.4
+filters:
+  min_length: 2
+  preferred_max_length: 12
+  soft_max_length: 16
+  hard_max_length: 30
+  min_cjk_ratio: 0.7
+  allow_terms:
+    - CP
+    - crush
+    - dating
+  reject_sentence_punctuation: true
+  reject_person_names: true
+levels:
+  method: score_quantile_provisional
+  quantile_boundaries:
+    level_5: 0.10
+    level_4: 0.30
+    level_3: 0.60
+    level_2: 0.90
+qa:
+  random_seed: 20261001
+  random_sample_size: 100
+  manual_sample_size: 100
+  manual_review_centers:
+    - 1
+    - 1000
+    - 5000
+    - 10000
+    - 30000
+    - 48000

@@ -1,0 +1,48 @@
+{
+  "total_records": 5000,
+  "unique_terms": 5000,
+  "unique_normalized_terms": 5000,
+  "exact_or_normalized_duplicate_pairs": 0,
+  "fuzzy_duplicate_candidates": 0,
+  "average_length": 2.5058,
+  "median_length": 2.0,
+  "p90_length": 4.0,
+  "max_length": 7,
+  "ratio_over_12": 0.0,
+  "ratio_over_16": 0.0,
+  "ratio_over_30": 0.0,
+  "category_distribution": {
+    "婚恋": 1213,
+    "恋爱历史": 280,
+    "对象关系": 571,
+    "表白与追求": 253,
+    "恋爱核心": 549,
+    "约会": 347,
+    "单身与脱单": 121,
+    "亲密行为": 482,
+    "校园恋爱": 460,
+    "社会比较与人生进度": 724
+  },
+  "similarity_distribution": {
+    "min": 0.48155047,
+    "max": 0.96703861,
+    "mean": 0.54361313,
+    "p10": 0.48774236,
+    "p25": 0.49835858,
+    "median": 0.52234388,
+    "p75": 0.56387743,
+    "p90": 0.624582
+  },
+  "level_distribution": {
+    "1": 500,
+    "2": 1500,
+    "3": 1500,
+    "4": 1000,
+    "5": 500
+  },
+  "manual_review_centers_unavailable_in_current_top_k": [
+    10000,
+    30000,
+    48000
+  ]
+}

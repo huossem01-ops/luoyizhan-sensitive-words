@@ -1,0 +1,3 @@
+{"id": 1, "text": "我高中就谈过女朋友了。", "expected_theme": "校园恋爱"}
+{"id": 2, "text": "昨天和对象去看电影。", "expected_theme": "约会"}
+{"id": 3, "text": "大学室友最近脱单了。", "expected_theme": "单身与脱单"}

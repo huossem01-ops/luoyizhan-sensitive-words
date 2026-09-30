@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/luoyizhan-retrieval-candidate.schema.json",
+  "title": "罗翼展语义召回候选",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "term", "normalized_term", "length", "score",
+    "max_seed_similarity", "top3_seed_similarity", "rank",
+    "best_seed", "best_category", "category_similarity",
+    "semantic_level", "source"
+  ],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1},
+    "term": {"type": "string", "minLength": 2, "maxLength": 30},
+    "normalized_term": {"type": "string", "minLength": 1},
+    "length": {"type": "integer", "minimum": 2, "maximum": 30},
+    "score": {"type": "number", "minimum": -1, "maximum": 1},
+    "max_seed_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+    "top3_seed_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+    "rank": {"type": "integer", "minimum": 1},
+    "best_seed": {"type": "string", "minLength": 1},
+    "best_category": {"type": "string", "minLength": 1},
+    "category_similarity": {"type": "number", "minimum": -1, "maximum": 1},
+    "semantic_level": {"type": "integer", "minimum": 1, "maximum": 5},
+    "source": {"type": "string", "minLength": 1}
+  }
+}

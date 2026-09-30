@@ -1,0 +1,10 @@
+gensim>=4.4,<5
+jieba>=0.42,<1
+numpy>=2.0,<3
+opencc-python-reimplemented>=0.1.7,<1
+PyYAML>=6,<7
+requests>=2.32,<3
+tqdm>=4.67,<5
+
+# Optional future reranking (not used by the current Tencent-vector MVP):
+# sentence-transformers>=6,<7

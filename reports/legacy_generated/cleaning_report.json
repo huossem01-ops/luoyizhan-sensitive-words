@@ -1,0 +1,60 @@
+{
+  "source_records": 10000,
+  "final_records": 836,
+  "source_length_distribution": {
+    "2-6": {
+      "count": 274,
+      "share": 0.0274
+    },
+    "7-12": {
+      "count": 329,
+      "share": 0.0329
+    },
+    "13-20": {
+      "count": 2571,
+      "share": 0.2571
+    },
+    "21-30": {
+      "count": 5115,
+      "share": 0.5115
+    },
+    ">30": {
+      "count": 1711,
+      "share": 0.1711
+    }
+  },
+  "final_length_distribution": {
+    "2-6": {
+      "count": 380,
+      "share": 0.454545
+    },
+    "7-12": {
+      "count": 338,
+      "share": 0.404306
+    },
+    "13-20": {
+      "count": 118,
+      "share": 0.141148
+    },
+    "21-30": {
+      "count": 0,
+      "share": 0.0
+    },
+    ">30": {
+      "count": 0,
+      "share": 0.0
+    }
+  },
+  "actions": {
+    "kept": 508,
+    "deleted": 5698,
+    "compressed": 3794
+  },
+  "rules": {
+    "target_2_6": "about 45%",
+    "target_7_12": "about 40%",
+    "target_13_20": "about 14%",
+    "max_21_30": "1%",
+    "over_30": "forbidden"
+  }
+}
